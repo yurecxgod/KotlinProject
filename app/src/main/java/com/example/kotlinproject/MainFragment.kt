@@ -89,6 +89,11 @@ class MainFragment : Fragment() {
     }
 }
 
+override fun onDestroyView() {
+    super.onDestroyView()
+    _binding = null
+}
+
 private fun View.showSnackbar(
     text: String,
     actionText: String,
